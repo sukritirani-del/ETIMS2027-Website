@@ -224,9 +224,12 @@ section {
 
 
 /* Desktop dropdown opening */
-
+@media(min-width:761px){
 .nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu{
+    display: block;
+}
+}
 .nav-dropdown.open .dropdown-menu {
     display: block;
 }
