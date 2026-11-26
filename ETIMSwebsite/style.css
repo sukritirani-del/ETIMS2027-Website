@@ -224,9 +224,12 @@ section {
 
 
 /* Desktop dropdown opening */
-
+@media(min-width:761px){
 .nav-dropdown:hover .dropdown-menu,
-.nav-dropdown:focus-within .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu{
+    display: block;
+}
+}
 .nav-dropdown.open .dropdown-menu {
     display: block;
 }
@@ -1436,4 +1439,73 @@ section {
         font-size: 38px;
     }
 
+}
+
+
+/* Committee portraits */
+.committee-block {
+    margin-top: 35px;
+}
+
+.committee-block > h3 {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.committee-person {
+    text-align: center;
+    padding: 22px 18px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.committee-person:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(16, 29, 25, 0.10);
+}
+
+.committee-person img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid var(--champagne);
+    margin: 0 auto 15px;
+}
+
+.committee-person .person-role {
+    margin-bottom: 8px;
+}
+
+.committee-person h4 {
+    font-family: var(--heading-font);
+    font-size: 23px;
+    line-height: 1.25;
+}
+
+.committee-person p {
+    color: #58645B;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+@media (max-width: 1100px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
 }
